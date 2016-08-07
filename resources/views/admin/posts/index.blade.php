@@ -11,12 +11,13 @@
             <th>#ID</th>
 
             <th>Author</th>
+            <th>Title</th>
+            <th>Body</th>
             <th>category</th>
             <th>photo</th>
             <th>created at</th>
             <th>updated at</th>
-            <th>Title</th>
-            <th>Body</th>
+
           </tr>
         </thead>
         <tbody>
@@ -29,12 +30,13 @@
                      <td>{{$post->id}}</td>
 
                      <td>{{$post->user->name}}</td>
-                     <td>{{$post->category_id}}</td>
+                     <td>{{$post->title}}</td>
+                     <td>{{$post->body}}</td>
+                     <td>{{$post->category->name}}</td>
                      <td><img height="80" src="{{$post->photo? $post->photo->file : 'http://placehold.it/400x400'}}" alt="Post Image"/></td>
                      <td>{{$post->created_at->diffForHumans()}}</td>
                      <td>{{$post->updated_at->diffForHumans()}}</td>
-                     <td>{{$post->title}}</td>
-                     <td>{{$post->body}}</td>
+
                   </tr>
                  @endforeach
 
