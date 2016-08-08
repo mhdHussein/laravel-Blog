@@ -3,13 +3,7 @@
 
 @section('content')
 
-    @if(Session::has('deleted_user'))
-
-        <div class="alert alert-danger">
-            {{session('deleted_user')}}
-        </div>
-
-    @endif
+    @include('partials._flash_messages')
 
     <h1>Users</h1>
 
